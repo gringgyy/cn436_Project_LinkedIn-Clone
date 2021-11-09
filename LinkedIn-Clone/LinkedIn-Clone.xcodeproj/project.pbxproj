@@ -11,6 +11,14 @@
 		865768AF273AEAB500DEFC9A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768AE273AEAB500DEFC9A /* ContentView.swift */; };
 		865768B1273AEAB600DEFC9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865768B0273AEAB600DEFC9A /* Assets.xcassets */; };
 		865768B4273AEAB600DEFC9A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 865768B3273AEAB600DEFC9A /* Preview Assets.xcassets */; };
+		865768C0273AECC100DEFC9A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768BF273AECC100DEFC9A /* MainView.swift */; };
+		865768C8273AEDA700DEFC9A /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768C7273AEDA700DEFC9A /* HomeView.swift */; };
+		865768CA273AEDB400DEFC9A /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768C9273AEDB400DEFC9A /* HomeCell.swift */; };
+		865768CD273AEE7600DEFC9A /* NetworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768CC273AEE7600DEFC9A /* NetworkView.swift */; };
+		865768D1273AEF3100DEFC9A /* PostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768D0273AEF3100DEFC9A /* PostView.swift */; };
+		865768D4273AEFDA00DEFC9A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768D3273AEFDA00DEFC9A /* NotificationView.swift */; };
+		865768DA273AF0D800DEFC9A /* JobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768D9273AF0D800DEFC9A /* JobView.swift */; };
+		865768DE273B058C00DEFC9A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768DD273B058C00DEFC9A /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,14 @@
 		865768AE273AEAB500DEFC9A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		865768B0273AEAB600DEFC9A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		865768B3273AEAB600DEFC9A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		865768BF273AECC100DEFC9A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		865768C7273AEDA700DEFC9A /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		865768C9273AEDB400DEFC9A /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		865768CC273AEE7600DEFC9A /* NetworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkView.swift; sourceTree = "<group>"; };
+		865768D0273AEF3100DEFC9A /* PostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostView.swift; sourceTree = "<group>"; };
+		865768D3273AEFDA00DEFC9A /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		865768D9273AF0D800DEFC9A /* JobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobView.swift; sourceTree = "<group>"; };
+		865768DD273B058C00DEFC9A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,7 @@
 		865768AB273AEAB500DEFC9A /* LinkedIn-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				865768BA273AEB4400DEFC9A /* View */,
 				865768AC273AEAB500DEFC9A /* LinkedIn_CloneApp.swift */,
 				865768AE273AEAB500DEFC9A /* ContentView.swift */,
 				865768B0273AEAB600DEFC9A /* Assets.xcassets */,
@@ -65,6 +82,77 @@
 				865768B3273AEAB600DEFC9A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		865768BA273AEB4400DEFC9A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				865768DB273B057600DEFC9A /* Profile */,
+				865768D8273AF0C400DEFC9A /* Job */,
+				865768D2273AEFB800DEFC9A /* Notification */,
+				865768CE273AEEFA00DEFC9A /* Post */,
+				865768CB273AEE3800DEFC9A /* Network */,
+				865768C6273AED9A00DEFC9A /* Home */,
+				865768BE273AEC9000DEFC9A /* Main */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		865768BE273AEC9000DEFC9A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				865768BF273AECC100DEFC9A /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		865768C6273AED9A00DEFC9A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				865768C7273AEDA700DEFC9A /* HomeView.swift */,
+				865768C9273AEDB400DEFC9A /* HomeCell.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		865768CB273AEE3800DEFC9A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				865768CC273AEE7600DEFC9A /* NetworkView.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		865768CE273AEEFA00DEFC9A /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				865768D0273AEF3100DEFC9A /* PostView.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		865768D2273AEFB800DEFC9A /* Notification */ = {
+			isa = PBXGroup;
+			children = (
+				865768D3273AEFDA00DEFC9A /* NotificationView.swift */,
+			);
+			path = Notification;
+			sourceTree = "<group>";
+		};
+		865768D8273AF0C400DEFC9A /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				865768D9273AF0D800DEFC9A /* JobView.swift */,
+			);
+			path = Job;
+			sourceTree = "<group>";
+		};
+		865768DB273B057600DEFC9A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				865768DD273B058C00DEFC9A /* ProfileView.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				865768D1273AEF3100DEFC9A /* PostView.swift in Sources */,
 				865768AF273AEAB500DEFC9A /* ContentView.swift in Sources */,
+				865768DE273B058C00DEFC9A /* ProfileView.swift in Sources */,
+				865768C8273AEDA700DEFC9A /* HomeView.swift in Sources */,
+				865768D4273AEFDA00DEFC9A /* NotificationView.swift in Sources */,
+				865768C0273AECC100DEFC9A /* MainView.swift in Sources */,
+				865768CD273AEE7600DEFC9A /* NetworkView.swift in Sources */,
+				865768DA273AF0D800DEFC9A /* JobView.swift in Sources */,
 				865768AD273AEAB500DEFC9A /* LinkedIn_CloneApp.swift in Sources */,
+				865768CA273AEDB400DEFC9A /* HomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,9 +362,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LinkedIn-Clone/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -283,6 +381,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "th.ac.tu.dome.cha.kulnis.LinkedIn-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -294,9 +393,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"LinkedIn-Clone/Preview Content\"";
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -311,6 +412,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "th.ac.tu.dome.cha.kulnis.LinkedIn-Clone";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
