@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct NotificationView: View {
+    let notifications = Array(1...3)
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            LazyVStack(alignment: .leading) {
+                ForEach(notifications, id: \.self) { notification in
+                    NotificationCell()
+                        .padding(.top)
+                }
+            }
+            .padding(.leading, 20)
+        }
     }
 }
 
