@@ -9,7 +9,6 @@ import SwiftUI
     
 struct ContentView: View {
     @State var selectedIndex = 0
-    @State var menuOpened = false
     
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @State var addBackgroundPresented = false
     var body: some View {
         ScrollView {
             RoundedRectangle(cornerRadius: 0)
@@ -31,6 +32,11 @@ struct ProfileView: View {
                 Text("Location")
                     .font(.system(size: 15, weight: .light))
                 
+                Text(" ")
+    
+                Text("100 connections")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundColor(.blue)
                 HStack {
                     Button {
                         //didFollow ? viewModel.unfollow() : viewModel.follow()
@@ -49,8 +55,9 @@ struct ProfileView: View {
                     Spacer()
                     Button {
                         //didFollow ? viewModel.unfollow() : viewModel.follow()
+                        addBackgroundPresented.toggle()
                     } label: {
-                        Text("Post")
+                        Text("Add Background")
                             .font(.system(size: 16, weight: .semibold))
                             .frame(width: 175, height: 35)
                             .foregroundColor(Color.blue)
@@ -62,12 +69,17 @@ struct ProfileView: View {
                     }
                     .padding(.top, 10)
                     .padding(.trailing, 20)
+                    .sheet(isPresented: $addBackgroundPresented) {
+                        AddBackgroundView()
+                    }
                 }
                 
                 
             }
             .padding(.leading, 20)
             .padding(.top, -85)
+            
+            BackgroundView()
         }
     }
 }

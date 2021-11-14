@@ -37,12 +37,12 @@ struct JobCell: View {
                 } label: {
                     Text("Apply")
                         .font(.system(size: 16, weight: .semibold))
-                        .frame(width: 110, height: 30)
+                        .frame(width: 100, height: 30)
                         .foregroundColor(Color.blue)
                         .background(.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color.blue, lineWidth: 2)
+                                .stroke(Color.blue, lineWidth: 1)
                         )
                 }
                 .padding(.top, 5)
@@ -54,12 +54,12 @@ struct JobCell: View {
                 } label: {
                     Text("View Detail")
                         .font(.system(size: 16, weight: .semibold))
-                        .frame(width: 110, height: 30)
+                        .frame(width: 100, height: 30)
                         .foregroundColor(Color.gray)
                         .background(.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color.gray, lineWidth: 2)
+                                .stroke(Color.gray, lineWidth: 1)
                         )
                 }
                 .padding(.top, 5)

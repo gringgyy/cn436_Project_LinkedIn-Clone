@@ -24,6 +24,12 @@
 		865768F32740497200DEFC9A /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F22740497200DEFC9A /* NotificationCell.swift */; };
 		865768F527404D4F00DEFC9A /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F427404D4F00DEFC9A /* JobCell.swift */; };
 		865768F72740513300DEFC9A /* JobDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F62740513300DEFC9A /* JobDetail.swift */; };
+		865768FA2740F0A200DEFC9A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F92740F0A200DEFC9A /* SignInView.swift */; };
+		865768FE2740FB7B00DEFC9A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768FD2740FB7B00DEFC9A /* SignUpView.swift */; };
+		8657690027410C0C00DEFC9A /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768FF27410C0C00DEFC9A /* EditProfileView.swift */; };
+		8657690227410C2F00DEFC9A /* AddBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657690127410C2F00DEFC9A /* AddBackgroundView.swift */; };
+		8657690427410C5D00DEFC9A /* BackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657690327410C5D00DEFC9A /* BackgroundCell.swift */; };
+		8657690627410C7200DEFC9A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657690527410C7200DEFC9A /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +51,12 @@
 		865768F22740497200DEFC9A /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
 		865768F427404D4F00DEFC9A /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
 		865768F62740513300DEFC9A /* JobDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetail.swift; sourceTree = "<group>"; };
+		865768F92740F0A200DEFC9A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		865768FD2740FB7B00DEFC9A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		865768FF27410C0C00DEFC9A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		8657690127410C2F00DEFC9A /* AddBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBackgroundView.swift; sourceTree = "<group>"; };
+		8657690327410C5D00DEFC9A /* BackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCell.swift; sourceTree = "<group>"; };
+		8657690527410C7200DEFC9A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +109,7 @@
 		865768BA273AEB4400DEFC9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				865768F82740ED9F00DEFC9A /* Authentication */,
 				865768ED273F009900DEFC9A /* Chat */,
 				865768DB273B057600DEFC9A /* Profile */,
 				865768D8273AF0C400DEFC9A /* Job */,
@@ -166,6 +179,10 @@
 			isa = PBXGroup;
 			children = (
 				865768DD273B058C00DEFC9A /* ProfileView.swift */,
+				865768FF27410C0C00DEFC9A /* EditProfileView.swift */,
+				8657690127410C2F00DEFC9A /* AddBackgroundView.swift */,
+				8657690327410C5D00DEFC9A /* BackgroundCell.swift */,
+				8657690527410C7200DEFC9A /* BackgroundView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -176,6 +193,15 @@
 				865768EE273F00A600DEFC9A /* ChatView.swift */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		865768F82740ED9F00DEFC9A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				865768F92740F0A200DEFC9A /* SignInView.swift */,
+				865768FD2740FB7B00DEFC9A /* SignUpView.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,20 +274,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8657690027410C0C00DEFC9A /* EditProfileView.swift in Sources */,
 				865768D1273AEF3100DEFC9A /* PostView.swift in Sources */,
 				865768AF273AEAB500DEFC9A /* ContentView.swift in Sources */,
+				8657690627410C7200DEFC9A /* BackgroundView.swift in Sources */,
 				865768DE273B058C00DEFC9A /* ProfileView.swift in Sources */,
 				865768C8273AEDA700DEFC9A /* HomeView.swift in Sources */,
 				865768F32740497200DEFC9A /* NotificationCell.swift in Sources */,
 				865768EF273F00A600DEFC9A /* ChatView.swift in Sources */,
+				8657690427410C5D00DEFC9A /* BackgroundCell.swift in Sources */,
 				865768D4273AEFDA00DEFC9A /* NotificationView.swift in Sources */,
 				865768C0273AECC100DEFC9A /* MainView.swift in Sources */,
+				8657690227410C2F00DEFC9A /* AddBackgroundView.swift in Sources */,
 				865768CD273AEE7600DEFC9A /* NetworkView.swift in Sources */,
 				865768DA273AF0D800DEFC9A /* JobView.swift in Sources */,
 				865768AD273AEAB500DEFC9A /* LinkedIn_CloneApp.swift in Sources */,
 				865768F72740513300DEFC9A /* JobDetail.swift in Sources */,
+				865768FE2740FB7B00DEFC9A /* SignUpView.swift in Sources */,
 				865768F1273FD27100DEFC9A /* NetworkCell.swift in Sources */,
 				865768CA273AEDB400DEFC9A /* HomeCell.swift in Sources */,
+				865768FA2740F0A200DEFC9A /* SignInView.swift in Sources */,
 				865768F527404D4F00DEFC9A /* JobCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
