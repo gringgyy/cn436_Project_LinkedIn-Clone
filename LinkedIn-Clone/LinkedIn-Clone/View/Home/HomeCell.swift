@@ -6,40 +6,56 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct HomeCell: View {
     //var postImage: String
+    @ObservedObject var viewModel: HomeCellViewModel
+    var didLike: Bool {
+        viewModel.post.didLike ?? false
+    }
     var body: some View {
         VStack (alignment: .leading){
-            HStack {
-                Image("Anchilee")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 45, height: 45)
-                    .clipped()
-                    .clipShape(Circle())
-                VStack (alignment: .leading){
-                    Text("Name Surname")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundColor(.black)
-                    Text("Status")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(.gray)
-                    Text("2H")
-                        .font(.system(size: 12, weight: .medium))
-                        .foregroundColor(.gray)
+            if let user = viewModel.post.user {
+                NavigationLink(destination: ProfileView(user: user)) {
+                    HStack {
+                        if let imageURL = viewModel.post.ownerImageURL {
+                            KFImage(URL(string: imageURL))
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 45, height: 45)
+                                .clipped()
+                                .clipShape(Circle())
+                        } else {
+                            Image(systemName: "person.crop.circle.fill")
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 45, height: 45)
+                                .clipped()
+                                .clipShape(Circle())
+                        }
+                            VStack (alignment: .leading){
+                                Text(viewModel.post.ownerFullname)
+                                    .font(.system(size: 14, weight: .semibold))
+                                    .foregroundColor(.black)
+                                Text("Status")
+                                    .font(.system(size: 12, weight: .medium))
+                                    .foregroundColor(.gray)
+                                Text("2H")
+                                    .font(.system(size: 12, weight: .medium))
+                                    .foregroundColor(.gray)
+                            }
+                    }
+                    .padding(.leading, 20)
                 }
-                
-                
             }
-            .padding(.leading, 20)
             
-            
-            Text("Ann Anchilee Scott-Kemmis THAILAND")
+            Text(" \(viewModel.post.caption)")
                 .font(.system(size: 14, weight: .medium))
                 .padding(.leading, 20)
                 .padding(.bottom, 0.5)
-            Image("Anchilee")
+            
+            KFImage(URL(string: viewModel.post.imageURL))
                 .resizable()
                 .scaledToFill()
                 .frame(maxHeight: 400)
@@ -50,7 +66,7 @@ struct HomeCell: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: 15, height: 15)
-                Text("24")
+                Text(viewModel.likeText)
                     .font(.system(size: 12, weight: .light))
             }
             .padding([.leading, .top, .bottom], 8)
@@ -58,26 +74,32 @@ struct HomeCell: View {
             Divider()
             
             HStack {
-                VStack {
-                    Image(systemName: "hand.thumbsup")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 15, height: 15)
-                    Text("Like")
-                        .font(.system(size: 12, weight: .medium))
+                Button {
+                    didLike ? viewModel.unlike() : viewModel.like()
+                } label: {
+                    VStack {
+                        Image(systemName: didLike ? "hand.thumbsup.fill" : "hand.thumbsup")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 15, height: 15)
+                        Text("Like")
+                            .font(.system(size: 12, weight: .medium))
+                    }
                 }
                 .padding(.trailing, 30)
                 .padding(.leading, 35)
                 
-                VStack {
-                    Image(systemName: "text.bubble")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 15, height: 15)
-                    Text("Comment")
-                        .font(.system(size: 12, weight: .medium))
+                NavigationLink(destination: CommentsView(post: viewModel.post)) {
+                    VStack {
+                        Image(systemName: "text.bubble")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 15, height: 15)
+                        Text("Comment")
+                            .font(.system(size: 12, weight: .medium))
+                    }
+                    .padding([.leading, .trailing], 30)
                 }
-                .padding([.leading, .trailing], 30)
                 
                 VStack {
                     Image(systemName: "arrow.turn.up.right")
@@ -102,11 +124,5 @@ struct HomeCell: View {
         }
         .padding([.top, .bottom], 10)
         .background(Color.white)
-    }
-}
-
-struct HomeCell_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeCell()
     }
 }

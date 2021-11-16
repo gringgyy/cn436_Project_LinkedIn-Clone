@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct NetworkCell: View {
+    let user: User
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
             .stroke(.tertiary, lineWidth: 1)
@@ -19,14 +21,23 @@ struct NetworkCell: View {
             .overlay(
                 VStack {
                     Group {
-                        Image("Anchilee")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 80, height: 80)
-                            .clipped()
-                            .clipShape(Circle())
-                            .padding(.top, 20)
-                        Text("Name Surname")
+                        if let imageURL = user.profileImageURL {
+                            KFImage(URL(string: imageURL))
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipped()
+                                .clipShape(Circle())
+                                .padding(.top, 20)
+                        } else {
+                            Image(systemName: "person.crop.circle.fill")
+                                .scaledToFill()
+                                .frame(width: 80, height: 80)
+                                .clipped()
+                                .clipShape(Circle())
+                                .padding(.top, 20)
+                        }
+                        Text(user.fullname)
                             .font(.system(size: 14, weight: .semibold))
                             .foregroundColor(.black)
                         Text("Status")
@@ -51,11 +62,5 @@ struct NetworkCell: View {
                     .padding(.bottom, 20)
                 }
             )
-    }
-}
-
-struct NetworkCell_Previews: PreviewProvider {
-    static var previews: some View {
-        NetworkCell()
     }
 }

@@ -9,6 +9,24 @@ import SwiftUI
 
 struct AddBackgroundView: View {
     @Environment(\.dismiss) var dismiss
+    @State var name = ""
+    @State var location = ""
+    @State var date = ""
+    @State var description = ""
+    
+    @State var value = ""
+    var placeholder = "Select Type"
+    var dropDownList = ["Experience", "Education", "Licenses & certifications", "Volunteering"]
+    
+    let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateStyle = .long
+            return formatter
+        }()
+    
+    @State private var pickDate = Date()
+    
+    
     
     var body: some View {
         VStack {
@@ -16,36 +34,61 @@ struct AddBackgroundView: View {
                 Text("Type")
                     .font(.system(size: 15, weight: .light))
                     .foregroundColor(.black)
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 2)
-                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 40)
+                Menu {
+                    ForEach(dropDownList, id: \.self){ client in
+                        Button(client) {
+                            self.value = client
+                        }
+                    }
+                } label: {
+                    VStack(spacing: 5){
+                        HStack{
+                            Text(value.isEmpty ? placeholder : value)
+                                .foregroundColor(value.isEmpty ? .gray : .black)
+                                
+                            //Spacer()
+                            Image(systemName: "chevron.down")
+                                .foregroundColor(Color.gray)
+                                .font(Font.system(size: 17, weight: .medium))
+                        }
+                        .padding(.horizontal)
+                        Rectangle()
+                            .fill(Color.gray)
+                            .frame(width: UIScreen.main.bounds.width / 1.5, height: 1.5)
+                    }
+                }
                 Text("Name")
                     .font(.system(size: 15, weight: .light))
                     .foregroundColor(.black)
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 2)
-                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 40)
+                CustomTextField(text: $name)
                 Text("Location")
                     .font(.system(size: 15, weight: .light))
                     .foregroundColor(.black)
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 2)
-                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 40)
-                Text("Time")
+                CustomTextField(text: $location)
+                Text("Date")
                     .font(.system(size: 15, weight: .light))
                     .foregroundColor(.black)
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 2)
-                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 40)
+                DatePicker(selection: $pickDate, in: ...Date(), displayedComponents: .date) {
+                    Text("Select a date")
+                        .foregroundColor(.gray)
+                }
+                .frame(width: UIScreen.main.bounds.width / 1.5)
+                
                 Text("Description")
                     .font(.system(size: 15, weight: .light))
                     .foregroundColor(.black)
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.gray, lineWidth: 2)
-                    .frame(width: UIScreen.main.bounds.width / 1.5, height: 40)
-                    .padding(.bottom, 30)
-                
             }
+            Rectangle()
+                .fill(Color.gray)
+                .frame(width: UIScreen.main.bounds.width / 1.5, height: 1.5)
+            TextEditor(text: $description)
+                .frame(width: UIScreen.main.bounds.width / 1.5, height: 150)
+                .padding()
+            Rectangle()
+                .fill(Color.gray)
+                .frame(width: UIScreen.main.bounds.width / 1.5, height: 1.5)
+                .padding(.bottom, 30)
+                
             
             Button {
                 //didFollow ? viewModel.unfollow() : viewModel.follow()
@@ -61,11 +104,5 @@ struct AddBackgroundView: View {
                     )
             }
         }
-    }
-}
-
-struct AddBackgroundView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddBackgroundView()
     }
 }

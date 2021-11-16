@@ -6,34 +6,53 @@
 //
 
 import SwiftUI
+import Kingfisher
 
-struct JobCell: View {
+struct JobCellView: View {
+    @ObservedObject var viewModel: JobCellViewModel
+    
     @State var detailPresented = false
+    
+    var didApply: Bool {
+        viewModel.job.didApply ?? false
+    }
     var body: some View {
         HStack(alignment: .top) {
-            Image("Anchilee")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 65, height: 65)
-                .clipped()
-                .clipShape(Circle())
-                .padding(.top, 5)
+            
+            if let imageURL = viewModel.job.ownerImageURL {
+                KFImage(URL(string:  imageURL))
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 65, height: 65)
+                    .clipped()
+                    .clipShape(Circle())
+                    .padding(.top, 5)
+            } else {
+            Image(systemName: "person.crop.circle.fill")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 65, height: 65)
+                    .clipped()
+                    .clipShape(Circle())
+                    .padding(.top, 5)
+            }
+            
             VStack(alignment: .leading) {
-                Text("Job Name")
+                Text(viewModel.job.jobTitle)
                     .font(.system(size: 18, weight: .semibold))
-                Text("Job Poster")
+                Text(viewModel.job.ownerFullname)
                     .font(.system(size: 17, weight: .light))
-                Text("Location")
+                Text(viewModel.job.jobLocation)
                     .font(.system(size: 15, weight: .light))
                     .foregroundColor(.gray)
-                Text("2 days ago")
+                Text(viewModel.timestamp)
                     .font(.system(size: 12, weight: .light))
                     .foregroundColor(.gray)
             }
             .padding(.top, 5)
             VStack {
                 Button {
-                    //didFollow ? viewModel.unfollow() : viewModel.follow()
+                    didApply ? viewModel.cancelApply() : viewModel.apply()
                 } label: {
                     Text("Apply")
                         .font(.system(size: 16, weight: .semibold))
@@ -49,7 +68,6 @@ struct JobCell: View {
                 .padding(.leading, 70)
                 
                 Button {
-                    //didFollow ? viewModel.unfollow() : viewModel.follow()
                     detailPresented.toggle()
                 } label: {
                     Text("View Detail")
@@ -65,7 +83,7 @@ struct JobCell: View {
                 .padding(.top, 5)
                 .padding(.leading, 70)
                 .sheet(isPresented: $detailPresented) {
-                    JobDetail()
+                    JobDetailView()
                 } 
             }
             
@@ -73,11 +91,5 @@ struct JobCell: View {
         .onTapGesture {
             
         }
-    }
-}
-
-struct JobCell_Previews: PreviewProvider {
-    static var previews: some View {
-        JobCell()
     }
 }

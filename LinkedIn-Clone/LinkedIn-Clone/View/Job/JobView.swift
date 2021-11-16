@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct JobView: View {
-    let notifications = Array(1...3)
+    @ObservedObject var viewModel = JobViewModel()
+    
     var body: some View {
         ScrollView {
+            AddJobButtonView(viewModel: viewModel)
             LazyVStack(alignment: .leading) {
-                ForEach(notifications, id: \.self) { notification in
-                    JobCell()
+                ForEach(viewModel.jobs) { job in
+                    JobCellView(viewModel: JobCellViewModel(job: job))
                         .padding(.top)
                 }
             }

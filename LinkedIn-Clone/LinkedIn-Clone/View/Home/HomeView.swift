@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    @ObservedObject var viewModel = HomeViewModel()
     var body: some View {
         ScrollView {
             LazyVStack {
-                HomeCell()
-                    .padding(.bottom, 10)
-                HomeCell()
+                ForEach(viewModel.posts) { post in
+                    HomeCell(viewModel: HomeCellViewModel(post: post))
+                }
             }
         }
         .background(.quaternary)

@@ -22,14 +22,56 @@
 		865768EF273F00A600DEFC9A /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768EE273F00A600DEFC9A /* ChatView.swift */; };
 		865768F1273FD27100DEFC9A /* NetworkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F0273FD27100DEFC9A /* NetworkCell.swift */; };
 		865768F32740497200DEFC9A /* NotificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F22740497200DEFC9A /* NotificationCell.swift */; };
-		865768F527404D4F00DEFC9A /* JobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F427404D4F00DEFC9A /* JobCell.swift */; };
-		865768F72740513300DEFC9A /* JobDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F62740513300DEFC9A /* JobDetail.swift */; };
+		865768F527404D4F00DEFC9A /* JobCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F427404D4F00DEFC9A /* JobCellView.swift */; };
+		865768F72740513300DEFC9A /* JobDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F62740513300DEFC9A /* JobDetailView.swift */; };
 		865768FA2740F0A200DEFC9A /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768F92740F0A200DEFC9A /* SignInView.swift */; };
 		865768FE2740FB7B00DEFC9A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768FD2740FB7B00DEFC9A /* SignUpView.swift */; };
 		8657690027410C0C00DEFC9A /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865768FF27410C0C00DEFC9A /* EditProfileView.swift */; };
 		8657690227410C2F00DEFC9A /* AddBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657690127410C2F00DEFC9A /* AddBackgroundView.swift */; };
 		8657690427410C5D00DEFC9A /* BackgroundCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657690327410C5D00DEFC9A /* BackgroundCell.swift */; };
 		8657690627410C7200DEFC9A /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657690527410C7200DEFC9A /* BackgroundView.swift */; };
+		86576909274173E800DEFC9A /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 86576908274173E800DEFC9A /* FirebaseAuth */; };
+		8657690B274173E800DEFC9A /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 8657690A274173E800DEFC9A /* FirebaseDatabase */; };
+		8657690D274173E800DEFC9A /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 8657690C274173E800DEFC9A /* FirebaseFirestore */; };
+		8657690F274173E800DEFC9A /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 8657690E274173E800DEFC9A /* FirebaseFirestoreSwift-Beta */; };
+		86576911274173E800DEFC9A /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 86576910274173E800DEFC9A /* FirebaseStorage */; };
+		86576913274173E800DEFC9A /* FirebaseStorageSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 86576912274173E800DEFC9A /* FirebaseStorageSwift-Beta */; };
+		86576915274175E300DEFC9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86576914274175E300DEFC9A /* GoogleService-Info.plist */; };
+		86576918274179A800DEFC9A /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86576917274179A800DEFC9A /* CustomTextField.swift */; };
+		8657691A2741800C00DEFC9A /* CustomSecureField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769192741800C00DEFC9A /* CustomSecureField.swift */; };
+		8657691E2741ED8200DEFC9A /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657691D2741ED8200DEFC9A /* AuthViewModel.swift */; };
+		865769212741EF8B00DEFC9A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769202741EF8B00DEFC9A /* User.swift */; };
+		865769232741F09600DEFC9A /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769222741F09600DEFC9A /* Post.swift */; };
+		865769252741F12300DEFC9A /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769242741F12300DEFC9A /* Notification.swift */; };
+		86576929274244F700DEFC9A /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 86576928274244F700DEFC9A /* Kingfisher */; };
+		8657692B2742467C00DEFC9A /* HomeCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657692A2742467C00DEFC9A /* HomeCellViewModel.swift */; };
+		8657692E2742482A00DEFC9A /* NotificationsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657692D2742482A00DEFC9A /* NotificationsCellViewModel.swift */; };
+		8657693127424B1400DEFC9A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693027424B1400DEFC9A /* UserService.swift */; };
+		8657693327424EE600DEFC9A /* NotificationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693227424EE600DEFC9A /* NotificationsViewModel.swift */; };
+		8657693627425C0000DEFC9A /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693527425C0000DEFC9A /* CommentsView.swift */; };
+		8657693927425C4D00DEFC9A /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693827425C4D00DEFC9A /* CommentsViewModel.swift */; };
+		8657693B27425C8B00DEFC9A /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693A27425C8B00DEFC9A /* Comment.swift */; };
+		8657693D27425CDD00DEFC9A /* CommentsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693C27425CDD00DEFC9A /* CommentsCellView.swift */; };
+		8657693F27425DBE00DEFC9A /* CommentInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657693E27425DBE00DEFC9A /* CommentInputView.swift */; };
+		8657694127425ED000DEFC9A /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657694027425ED000DEFC9A /* HomeViewModel.swift */; };
+		86576944274271FA00DEFC9A /* UserListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86576943274271FA00DEFC9A /* UserListView.swift */; };
+		865769472742723B00DEFC9A /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769462742723B00DEFC9A /* SearchViewModel.swift */; };
+		865769492742758F00DEFC9A /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769482742758F00DEFC9A /* Extentions.swift */; };
+		8657694B2742781B00DEFC9A /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657694A2742781B00DEFC9A /* SearchBar.swift */; };
+		8657694D2742B97200DEFC9A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657694C2742B97200DEFC9A /* ImagePicker.swift */; };
+		865769502742BB9500DEFC9A /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657694F2742BB9500DEFC9A /* ProfileViewModel.swift */; };
+		865769532742BC6D00DEFC9A /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769522742BC6D00DEFC9A /* ImageUploader.swift */; };
+		865769552742EE2200DEFC9A /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769542742EE2200DEFC9A /* ProfileHeaderView.swift */; };
+		865769572742FCF000DEFC9A /* ProfileButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769562742FCF000DEFC9A /* ProfileButtonView.swift */; };
+		8657695A2743D77D00DEFC9A /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769592743D77D00DEFC9A /* ChatViewModel.swift */; };
+		8657695C2743D7A700DEFC9A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657695B2743D7A700DEFC9A /* Message.swift */; };
+		8657695E2743DFDC00DEFC9A /* ChatRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657695D2743DFDC00DEFC9A /* ChatRowView.swift */; };
+		865769602743E1CA00DEFC9A /* ChatInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657695F2743E1CA00DEFC9A /* ChatInputView.swift */; };
+		865769622744371200DEFC9A /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769612744371200DEFC9A /* Job.swift */; };
+		8657696427443CB800DEFC9A /* AddJobView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657696327443CB800DEFC9A /* AddJobView.swift */; };
+		86576967274441A600DEFC9A /* JobViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86576966274441A600DEFC9A /* JobViewModel.swift */; };
+		865769692744433700DEFC9A /* JobCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865769682744433700DEFC9A /* JobCellViewModel.swift */; };
+		8657696B2744527A00DEFC9A /* AddJobButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8657696A2744527A00DEFC9A /* AddJobButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,14 +91,49 @@
 		865768EE273F00A600DEFC9A /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		865768F0273FD27100DEFC9A /* NetworkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCell.swift; sourceTree = "<group>"; };
 		865768F22740497200DEFC9A /* NotificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCell.swift; sourceTree = "<group>"; };
-		865768F427404D4F00DEFC9A /* JobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCell.swift; sourceTree = "<group>"; };
-		865768F62740513300DEFC9A /* JobDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetail.swift; sourceTree = "<group>"; };
+		865768F427404D4F00DEFC9A /* JobCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellView.swift; sourceTree = "<group>"; };
+		865768F62740513300DEFC9A /* JobDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailView.swift; sourceTree = "<group>"; };
 		865768F92740F0A200DEFC9A /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		865768FD2740FB7B00DEFC9A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		865768FF27410C0C00DEFC9A /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 		8657690127410C2F00DEFC9A /* AddBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBackgroundView.swift; sourceTree = "<group>"; };
 		8657690327410C5D00DEFC9A /* BackgroundCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundCell.swift; sourceTree = "<group>"; };
 		8657690527410C7200DEFC9A /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		86576914274175E300DEFC9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		86576917274179A800DEFC9A /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		865769192741800C00DEFC9A /* CustomSecureField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSecureField.swift; sourceTree = "<group>"; };
+		8657691D2741ED8200DEFC9A /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		865769202741EF8B00DEFC9A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		865769222741F09600DEFC9A /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		865769242741F12300DEFC9A /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		8657692A2742467C00DEFC9A /* HomeCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCellViewModel.swift; sourceTree = "<group>"; };
+		8657692D2742482A00DEFC9A /* NotificationsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCellViewModel.swift; sourceTree = "<group>"; };
+		8657693027424B1400DEFC9A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		8657693227424EE600DEFC9A /* NotificationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModel.swift; sourceTree = "<group>"; };
+		8657693527425C0000DEFC9A /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
+		8657693827425C4D00DEFC9A /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		8657693A27425C8B00DEFC9A /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		8657693C27425CDD00DEFC9A /* CommentsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsCellView.swift; sourceTree = "<group>"; };
+		8657693E27425DBE00DEFC9A /* CommentInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentInputView.swift; sourceTree = "<group>"; };
+		8657694027425ED000DEFC9A /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		86576943274271FA00DEFC9A /* UserListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListView.swift; sourceTree = "<group>"; };
+		865769462742723B00DEFC9A /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		865769482742758F00DEFC9A /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
+		8657694A2742781B00DEFC9A /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		8657694C2742B97200DEFC9A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8657694F2742BB9500DEFC9A /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		865769522742BC6D00DEFC9A /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		865769542742EE2200DEFC9A /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		865769562742FCF000DEFC9A /* ProfileButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonView.swift; sourceTree = "<group>"; };
+		865769592743D77D00DEFC9A /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		8657695B2743D7A700DEFC9A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		8657695D2743DFDC00DEFC9A /* ChatRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRowView.swift; sourceTree = "<group>"; };
+		8657695F2743E1CA00DEFC9A /* ChatInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatInputView.swift; sourceTree = "<group>"; };
+		865769612744371200DEFC9A /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
+		8657696327443CB800DEFC9A /* AddJobView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobView.swift; sourceTree = "<group>"; };
+		86576966274441A600DEFC9A /* JobViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewModel.swift; sourceTree = "<group>"; };
+		865769682744433700DEFC9A /* JobCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobCellViewModel.swift; sourceTree = "<group>"; };
+		8657696A2744527A00DEFC9A /* AddJobButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddJobButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +141,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8657690B274173E800DEFC9A /* FirebaseDatabase in Frameworks */,
+				8657690F274173E800DEFC9A /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				86576929274244F700DEFC9A /* Kingfisher in Frameworks */,
+				86576909274173E800DEFC9A /* FirebaseAuth in Frameworks */,
+				86576911274173E800DEFC9A /* FirebaseStorage in Frameworks */,
+				8657690D274173E800DEFC9A /* FirebaseFirestore in Frameworks */,
+				86576913274173E800DEFC9A /* FirebaseStorageSwift-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,9 +173,14 @@
 		865768AB273AEAB500DEFC9A /* LinkedIn-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				8657692F27424B0000DEFC9A /* API */,
+				8657691F2741EF7C00DEFC9A /* Model */,
+				8657691B2741ED4000DEFC9A /* ViewModel */,
+				865769162741798000DEFC9A /* Utils */,
 				865768BA273AEB4400DEFC9A /* View */,
 				865768AC273AEAB500DEFC9A /* LinkedIn_CloneApp.swift */,
 				865768AE273AEAB500DEFC9A /* ContentView.swift */,
+				86576914274175E300DEFC9A /* GoogleService-Info.plist */,
 				865768B0273AEAB600DEFC9A /* Assets.xcassets */,
 				865768B2273AEAB600DEFC9A /* Preview Content */,
 			);
@@ -109,11 +198,13 @@
 		865768BA273AEB4400DEFC9A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				86576942274271E900DEFC9A /* Items */,
+				8657693427425BE100DEFC9A /* Comments */,
 				865768F82740ED9F00DEFC9A /* Authentication */,
 				865768ED273F009900DEFC9A /* Chat */,
 				865768DB273B057600DEFC9A /* Profile */,
 				865768D8273AF0C400DEFC9A /* Job */,
-				865768D2273AEFB800DEFC9A /* Notification */,
+				865768D2273AEFB800DEFC9A /* Notifications */,
 				865768CE273AEEFA00DEFC9A /* Post */,
 				865768CB273AEE3800DEFC9A /* Network */,
 				865768C6273AED9A00DEFC9A /* Home */,
@@ -144,6 +235,7 @@
 			children = (
 				865768CC273AEE7600DEFC9A /* NetworkView.swift */,
 				865768F0273FD27100DEFC9A /* NetworkCell.swift */,
+				8657694A2742781B00DEFC9A /* SearchBar.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -156,21 +248,23 @@
 			path = Post;
 			sourceTree = "<group>";
 		};
-		865768D2273AEFB800DEFC9A /* Notification */ = {
+		865768D2273AEFB800DEFC9A /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
 				865768D3273AEFDA00DEFC9A /* NotificationView.swift */,
 				865768F22740497200DEFC9A /* NotificationCell.swift */,
 			);
-			path = Notification;
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		865768D8273AF0C400DEFC9A /* Job */ = {
 			isa = PBXGroup;
 			children = (
 				865768D9273AF0D800DEFC9A /* JobView.swift */,
-				865768F427404D4F00DEFC9A /* JobCell.swift */,
-				865768F62740513300DEFC9A /* JobDetail.swift */,
+				865768F427404D4F00DEFC9A /* JobCellView.swift */,
+				865768F62740513300DEFC9A /* JobDetailView.swift */,
+				8657696327443CB800DEFC9A /* AddJobView.swift */,
+				8657696A2744527A00DEFC9A /* AddJobButtonView.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -183,6 +277,8 @@
 				8657690127410C2F00DEFC9A /* AddBackgroundView.swift */,
 				8657690327410C5D00DEFC9A /* BackgroundCell.swift */,
 				8657690527410C7200DEFC9A /* BackgroundView.swift */,
+				865769542742EE2200DEFC9A /* ProfileHeaderView.swift */,
+				865769562742FCF000DEFC9A /* ProfileButtonView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -191,6 +287,8 @@
 			isa = PBXGroup;
 			children = (
 				865768EE273F00A600DEFC9A /* ChatView.swift */,
+				8657695D2743DFDC00DEFC9A /* ChatRowView.swift */,
+				8657695F2743E1CA00DEFC9A /* ChatInputView.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -202,6 +300,139 @@
 				865768FD2740FB7B00DEFC9A /* SignUpView.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		865769162741798000DEFC9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				86576917274179A800DEFC9A /* CustomTextField.swift */,
+				865769192741800C00DEFC9A /* CustomSecureField.swift */,
+				865769482742758F00DEFC9A /* Extentions.swift */,
+				8657694C2742B97200DEFC9A /* ImagePicker.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8657691B2741ED4000DEFC9A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				865769652744418E00DEFC9A /* Job */,
+				865769582743D76500DEFC9A /* Chat */,
+				8657694E2742BB8100DEFC9A /* Profile */,
+				865769452742722100DEFC9A /* Search */,
+				8657693727425C3800DEFC9A /* Comments */,
+				8657692C2742473800DEFC9A /* Notifications */,
+				865769262742446800DEFC9A /* Home */,
+				8657691C2741ED6900DEFC9A /* Authentication */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8657691C2741ED6900DEFC9A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				8657691D2741ED8200DEFC9A /* AuthViewModel.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		8657691F2741EF7C00DEFC9A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				865769202741EF8B00DEFC9A /* User.swift */,
+				865769222741F09600DEFC9A /* Post.swift */,
+				865769242741F12300DEFC9A /* Notification.swift */,
+				8657693A27425C8B00DEFC9A /* Comment.swift */,
+				8657695B2743D7A700DEFC9A /* Message.swift */,
+				865769612744371200DEFC9A /* Job.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		865769262742446800DEFC9A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8657692A2742467C00DEFC9A /* HomeCellViewModel.swift */,
+				8657694027425ED000DEFC9A /* HomeViewModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8657692C2742473800DEFC9A /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				8657692D2742482A00DEFC9A /* NotificationsCellViewModel.swift */,
+				8657693227424EE600DEFC9A /* NotificationsViewModel.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		8657692F27424B0000DEFC9A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8657693027424B1400DEFC9A /* UserService.swift */,
+				865769522742BC6D00DEFC9A /* ImageUploader.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8657693427425BE100DEFC9A /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				8657693527425C0000DEFC9A /* CommentsView.swift */,
+				8657693C27425CDD00DEFC9A /* CommentsCellView.swift */,
+				8657693E27425DBE00DEFC9A /* CommentInputView.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		8657693727425C3800DEFC9A /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				8657693827425C4D00DEFC9A /* CommentsViewModel.swift */,
+			);
+			path = Comments;
+			sourceTree = "<group>";
+		};
+		86576942274271E900DEFC9A /* Items */ = {
+			isa = PBXGroup;
+			children = (
+				86576943274271FA00DEFC9A /* UserListView.swift */,
+			);
+			path = Items;
+			sourceTree = "<group>";
+		};
+		865769452742722100DEFC9A /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				865769462742723B00DEFC9A /* SearchViewModel.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8657694E2742BB8100DEFC9A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8657694F2742BB9500DEFC9A /* ProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		865769582743D76500DEFC9A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				865769592743D77D00DEFC9A /* ChatViewModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		865769652744418E00DEFC9A /* Job */ = {
+			isa = PBXGroup;
+			children = (
+				86576966274441A600DEFC9A /* JobViewModel.swift */,
+				865769682744433700DEFC9A /* JobCellViewModel.swift */,
+			);
+			path = Job;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +451,15 @@
 			dependencies = (
 			);
 			name = "LinkedIn-Clone";
+			packageProductDependencies = (
+				86576908274173E800DEFC9A /* FirebaseAuth */,
+				8657690A274173E800DEFC9A /* FirebaseDatabase */,
+				8657690C274173E800DEFC9A /* FirebaseFirestore */,
+				8657690E274173E800DEFC9A /* FirebaseFirestoreSwift-Beta */,
+				86576910274173E800DEFC9A /* FirebaseStorage */,
+				86576912274173E800DEFC9A /* FirebaseStorageSwift-Beta */,
+				86576928274244F700DEFC9A /* Kingfisher */,
+			);
 			productName = "LinkedIn-Clone";
 			productReference = 865768A9273AEAB500DEFC9A /* LinkedIn-Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -248,6 +488,10 @@
 				Base,
 			);
 			mainGroup = 865768A0273AEAB500DEFC9A;
+			packageReferences = (
+				86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				86576927274244F600DEFC9A /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 865768AA273AEAB500DEFC9A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -264,6 +508,7 @@
 			files = (
 				865768B4273AEAB600DEFC9A /* Preview Assets.xcassets in Resources */,
 				865768B1273AEAB600DEFC9A /* Assets.xcassets in Resources */,
+				86576915274175E300DEFC9A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,27 +519,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8657692E2742482A00DEFC9A /* NotificationsCellViewModel.swift in Sources */,
 				8657690027410C0C00DEFC9A /* EditProfileView.swift in Sources */,
 				865768D1273AEF3100DEFC9A /* PostView.swift in Sources */,
+				8657694D2742B97200DEFC9A /* ImagePicker.swift in Sources */,
 				865768AF273AEAB500DEFC9A /* ContentView.swift in Sources */,
+				865769212741EF8B00DEFC9A /* User.swift in Sources */,
+				8657696427443CB800DEFC9A /* AddJobView.swift in Sources */,
 				8657690627410C7200DEFC9A /* BackgroundView.swift in Sources */,
 				865768DE273B058C00DEFC9A /* ProfileView.swift in Sources */,
+				8657693F27425DBE00DEFC9A /* CommentInputView.swift in Sources */,
+				86576967274441A600DEFC9A /* JobViewModel.swift in Sources */,
 				865768C8273AEDA700DEFC9A /* HomeView.swift in Sources */,
+				8657692B2742467C00DEFC9A /* HomeCellViewModel.swift in Sources */,
+				8657694127425ED000DEFC9A /* HomeViewModel.swift in Sources */,
+				865769692744433700DEFC9A /* JobCellViewModel.swift in Sources */,
 				865768F32740497200DEFC9A /* NotificationCell.swift in Sources */,
+				865769492742758F00DEFC9A /* Extentions.swift in Sources */,
 				865768EF273F00A600DEFC9A /* ChatView.swift in Sources */,
+				8657693D27425CDD00DEFC9A /* CommentsCellView.swift in Sources */,
 				8657690427410C5D00DEFC9A /* BackgroundCell.swift in Sources */,
 				865768D4273AEFDA00DEFC9A /* NotificationView.swift in Sources */,
+				865769572742FCF000DEFC9A /* ProfileButtonView.swift in Sources */,
 				865768C0273AECC100DEFC9A /* MainView.swift in Sources */,
+				8657693627425C0000DEFC9A /* CommentsView.swift in Sources */,
+				865769472742723B00DEFC9A /* SearchViewModel.swift in Sources */,
 				8657690227410C2F00DEFC9A /* AddBackgroundView.swift in Sources */,
+				865769552742EE2200DEFC9A /* ProfileHeaderView.swift in Sources */,
+				86576918274179A800DEFC9A /* CustomTextField.swift in Sources */,
+				8657695A2743D77D00DEFC9A /* ChatViewModel.swift in Sources */,
 				865768CD273AEE7600DEFC9A /* NetworkView.swift in Sources */,
+				86576944274271FA00DEFC9A /* UserListView.swift in Sources */,
+				8657696B2744527A00DEFC9A /* AddJobButtonView.swift in Sources */,
+				8657695E2743DFDC00DEFC9A /* ChatRowView.swift in Sources */,
+				865769532742BC6D00DEFC9A /* ImageUploader.swift in Sources */,
+				8657693927425C4D00DEFC9A /* CommentsViewModel.swift in Sources */,
+				865769622744371200DEFC9A /* Job.swift in Sources */,
 				865768DA273AF0D800DEFC9A /* JobView.swift in Sources */,
 				865768AD273AEAB500DEFC9A /* LinkedIn_CloneApp.swift in Sources */,
-				865768F72740513300DEFC9A /* JobDetail.swift in Sources */,
+				865769502742BB9500DEFC9A /* ProfileViewModel.swift in Sources */,
+				865769232741F09600DEFC9A /* Post.swift in Sources */,
+				8657693327424EE600DEFC9A /* NotificationsViewModel.swift in Sources */,
+				865768F72740513300DEFC9A /* JobDetailView.swift in Sources */,
 				865768FE2740FB7B00DEFC9A /* SignUpView.swift in Sources */,
+				8657693B27425C8B00DEFC9A /* Comment.swift in Sources */,
+				865769252741F12300DEFC9A /* Notification.swift in Sources */,
 				865768F1273FD27100DEFC9A /* NetworkCell.swift in Sources */,
+				865769602743E1CA00DEFC9A /* ChatInputView.swift in Sources */,
+				8657694B2742781B00DEFC9A /* SearchBar.swift in Sources */,
+				8657691A2741800C00DEFC9A /* CustomSecureField.swift in Sources */,
+				8657691E2741ED8200DEFC9A /* AuthViewModel.swift in Sources */,
+				8657693127424B1400DEFC9A /* UserService.swift in Sources */,
 				865768CA273AEDB400DEFC9A /* HomeCell.swift in Sources */,
+				8657695C2743D7A700DEFC9A /* Message.swift in Sources */,
 				865768FA2740F0A200DEFC9A /* SignInView.swift in Sources */,
-				865768F527404D4F00DEFC9A /* JobCell.swift in Sources */,
+				865768F527404D4F00DEFC9A /* JobCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -501,6 +780,63 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.1;
+			};
+		};
+		86576927274244F600DEFC9A /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		86576908274173E800DEFC9A /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		8657690A274173E800DEFC9A /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		8657690C274173E800DEFC9A /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		8657690E274173E800DEFC9A /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		86576910274173E800DEFC9A /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		86576912274173E800DEFC9A /* FirebaseStorageSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576907274173E800DEFC9A /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageSwift-Beta";
+		};
+		86576928274244F700DEFC9A /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 86576927274244F600DEFC9A /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 865768A1273AEAB500DEFC9A /* Project object */;
 }

@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct MainView: View {
+    @State var user: User
     @Binding var selectedIndex: Int
-    @State var menuOpened = false
     
     var body: some View {
         NavigationView {
@@ -77,18 +77,17 @@ struct MainView: View {
         }
     }
     
-    func toggleMenu() {
-        menuOpened.toggle()
-    }
     var profileButton: some View {
-        NavigationLink(destination: ProfileView()) {
+        NavigationLink(destination: ProfileView(user: user)) {
             Image(systemName: "person.crop.circle.fill")
                 .foregroundColor(.gray)
         }
     }
     
     var logOutButton: some View {
-        NavigationLink(destination: ChatView()) {
+        Button {
+            AuthViewModel.shared.signOut()
+        } label: {
             Image(systemName: "rectangle.portrait.and.arrow.right")
                 .foregroundColor(.red)
         }

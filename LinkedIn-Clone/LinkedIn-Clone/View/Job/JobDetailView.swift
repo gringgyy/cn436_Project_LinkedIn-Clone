@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct JobDetail: View {
+struct JobDetailView: View {
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
@@ -96,8 +96,8 @@ struct JobDetail: View {
         
 }
 
-struct JobDetail_Previews: PreviewProvider {
+struct JobDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        JobDetail()
+        JobDetailView()
     }
 }
