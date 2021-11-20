@@ -9,14 +9,13 @@ import SwiftUI
 import Kingfisher
 
 struct ProfileView: View {
+    //@ObservedObject var viewModel: BackgroundViewModel
     @State var user: User
+    //@State var background: Background
     
     var body: some View {
         ScrollView {
             ProfileHeaderView(viewModel: ProfileViewModel(user: user))
-            if let currentProfileID = user.id {
-                BackgroundView()
-            }
         }
     }
 }

@@ -19,48 +19,34 @@ struct ProfileButtonView: View {
     var didConnect: Bool {
         viewModel.user.didConnect ?? false
     }
+    
     var body: some View {
         if viewModel.user.isCurrentUser {
             HStack {
                 Button {
-                    //didFollow ? viewModel.unfollow() : viewModel.follow()
+                    editProfileShow.toggle()
                 } label: {
                     Text("Edit Profile")
                         .font(.system(size: 16, weight: .semibold))
-                        .frame(width: 175, height: 35)
+                        .frame(width: UIScreen.main.bounds.width / 1.15, height: 35)
                         .foregroundColor(Color.blue)
                         .background(.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 30)
                                 .stroke(Color.blue, lineWidth: 2)
                         )
+                }.sheet(isPresented: $editProfileShow) {
+                    EditProfileView(user: $viewModel.user)
                 }
                 .padding(.top, 10)
-                Spacer()
-                Button {
-                    //didFollow ? viewModel.unfollow() : viewModel.follow()
-                    addBackgroundPresented.toggle()
-                } label: {
-                    Text("Add Background")
-                        .font(.system(size: 16, weight: .semibold))
-                        .frame(width: 175, height: 35)
-                        .foregroundColor(Color.blue)
-                        .background(.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color.blue, lineWidth: 2)
-                        )
-                }
-                .padding(.top, 10)
-                .padding(.trailing, 20)
-                .sheet(isPresented: $addBackgroundPresented) {
-                    AddBackgroundView()
-                }
+                
+                
             }
         } else {
             HStack {
                 Button {
-                    //didFollow ? viewModel.unfollow() : viewModel.follow()
+                    didRequest ? viewModel.cancelRequest() : viewModel.request()
+                    viewModel.connection()
                 } label: {
                     Text(didRequest ? (didConnect ? "Connected" : "Requested") : "Connect")
                         .font(.system(size: 16, weight: .semibold))
@@ -69,7 +55,7 @@ struct ProfileButtonView: View {
                         .background(.white)
                         .overlay(
                             RoundedRectangle(cornerRadius: 30)
-                                .stroke((didRequest ? Color.gray : Color.blue), lineWidth: 2)
+                                .stroke((didRequest ? Color.gray : Color.blue), lineWidth: 1.5)
                         )
                 }
                 .padding(.top, 10)
@@ -84,7 +70,7 @@ struct ProfileButtonView: View {
                             .background(.white)
                             .overlay(
                                 RoundedRectangle(cornerRadius: 30)
-                                    .stroke(Color.blue, lineWidth: 2)
+                                    .stroke(Color.blue, lineWidth: 1.5)
                             )
                     }
                 }

@@ -6,45 +6,61 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct NotificationCell: View {
+    //let user: User
+    @ObservedObject var viewModel: NotificationsCellViewModel
+    
+    var didRequest: Bool {
+        viewModel.notification.didRequest ?? false
+    }
+    var didConnect: Bool {
+        viewModel.notification.didConnect ?? false
+    }
+    
     var body: some View {
         HStack {
-            Image("Anchilee")
-                .resizable()
-                .scaledToFill()
-                .frame(width: 65, height: 65)
-                .clipped()
-                .clipShape(Circle())
-            VStack(alignment: .leading) {
-                HStack {
-                    Text("Name Surname")
-                        .font(.system(size: 15, weight: .light))
-                    Text("viewed your profile")
-                        .font(.system(size: 15, weight: .semibold))
-                }
-                
-                Button {
-                    //didFollow ? viewModel.unfollow() : viewModel.follow()
-                } label: {
-                    Text("Connect")
-                        .font(.system(size: 16, weight: .semibold))
-                        .frame(width: 100, height: 30)
-                        .foregroundColor(Color.blue)
-                        .background(.white)
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 30)
-                                .stroke(Color.blue, lineWidth: 1)
-                        )
+            if let user = viewModel.notification.user {
+                NavigationLink(destination: ProfileView(user: user)) {
+                    if let imageURL = viewModel.notification.profileImageURL {
+                        KFImage(URL(string: imageURL))
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 65, height: 65)
+                            .clipped()
+                            .clipShape(Circle())
+                    } else {
+                        Image(systemName: "person.crop.circle.fill")
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 65, height: 65)
+                            .clipped()
+                            .clipShape(Circle())
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text(viewModel.notification.fullname)
+                                .font(.system(size: 15, weight: .light))
+                                .foregroundColor(.black)
+                            Text(viewModel.notification.type.notificationMessage)
+                                .font(.system(size: 15, weight: .semibold))
+                                .foregroundColor(.black)
+                                
+                        }
+                        if let post = viewModel.notification.post {
+                            NavigationLink(destination: HomeCell(viewModel: HomeCellViewModel(post: post))) {
+                                KFImage(URL(string: post.imageURL))
+                                    .resizable()
+                                    .scaledToFill()
+                                    .frame(width: 40, height: 40)
+                                    .clipped()
+                            }
+                        }
+                    }
                 }
             }
-            
         }
-    }
-}
-
-struct NotificationCell_Previews: PreviewProvider {
-    static var previews: some View {
-        NotificationCell()
     }
 }

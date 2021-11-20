@@ -37,7 +37,7 @@ struct ChatRowView: View {
                     .foregroundColor(.white)
                     .padding()
                     .background(Color.blue)
-                    .clipShape(Rectangle())
+                    .clipShape(MessageBubble(ownAccount: ownAccount))
                 
                 Text(message.timestampText())
                     .font(.caption2)

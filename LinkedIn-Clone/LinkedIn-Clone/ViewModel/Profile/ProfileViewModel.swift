@@ -14,6 +14,7 @@ class ProfileViewModel: ObservableObject {
     init(user: User) {
         self.user = user
         checkRequest()
+        checkConnect()
         checkStats()
     }
     
@@ -60,6 +61,22 @@ class ProfileViewModel: ObservableObject {
                 return
             }
             self.user.didRequest = false
+            self.user.didConnect = false
+        }
+    }
+    
+    func connection() {
+        if let didConnect = user.didConnect, didConnect {
+            return
+        }
+        guard let uid = user.id else { return }
+        UserService.connection(uid: uid) { error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+            NotificationsViewModel.sendNotification(withUID: uid, type: .answerRequest)
+            self.user.didConnect = true
         }
     }
     

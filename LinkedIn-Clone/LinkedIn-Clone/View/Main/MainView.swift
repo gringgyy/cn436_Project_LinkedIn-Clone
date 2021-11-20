@@ -19,56 +19,51 @@ struct MainView: View {
                         selectedIndex = 0
                     }
                     .tabItem {
-                        VStack {
-                            Image(systemName: "house.fill")
-                            Text("Home")
-                        }
+                        Image(systemName: "house.fill")
+                        Text("Home")
                     }
                     .tag(0)
+                
                 NetworkView()
                     .onTapGesture {
                         selectedIndex = 1
                     }
                     .tabItem {
-                        VStack {
-                            Image(systemName: "person.2.fill")
-                            Text("My Network")
-                        }
+                        Image(systemName: "person.2.fill")
+                        Text("My Network")
                     }
                     .tag(1)
+                
                 PostView()
                     .onTapGesture {
                         selectedIndex = 2
                     }
                     .tabItem {
-                        VStack {
-                            Image(systemName: "plus.app.fill")
-                            Text("Post")
-                        }
+                        Image(systemName: "plus.app.fill")
+                        Text("Post")
                     }
                     .tag(2)
+                
                 NotificationView()
                     .onTapGesture {
                         selectedIndex = 3
                     }
                     .tabItem {
-                        VStack {
-                            Image(systemName: "bell.fill")
-                            Text("Notifications")
-                        }
+                        Image(systemName: "bell.fill")
+                        Text("Notifications")
                     }
                     .tag(3)
+                
                 JobView()
                     .onTapGesture {
                         selectedIndex = 4
                     }
                     .tabItem {
-                        VStack {
-                            Image(systemName: "briefcase.fill")
-                            Text("Jobs")
-                        }
+                        Image(systemName: "briefcase.fill")
+                        Text("Jobs")
                     }
                     .tag(4)
+                
             }
             .navigationTitle(tabTitle)
             .navigationBarTitleDisplayMode(.inline)
@@ -96,7 +91,7 @@ struct MainView: View {
     var tabTitle: String {
         switch selectedIndex {
         case 0: return "Home"
-        case 1: return "Network"
+        case 1: return "My Network"
         case 2: return "Post"
         case 3: return "Notification"
         case 4: return "Jobs"

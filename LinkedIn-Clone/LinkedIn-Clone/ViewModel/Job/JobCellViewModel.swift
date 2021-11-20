@@ -43,7 +43,7 @@ class JobCellViewModel: ObservableObject {
                     return
                 }
                 
-                NotificationsViewModel.sendNotification(withUID: self.job.ownerUID, type: .apply)
+                NotificationsViewModel.sendNotification(withUID: self.job.ownerUID, type: .apply, job: self.job)
                 //self.job.apply += 1
                 self.job.didApply = true
             }

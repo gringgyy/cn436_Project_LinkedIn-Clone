@@ -23,6 +23,8 @@ struct Notification: Decodable, Identifiable {
     var job: Job?
     var user: User?
     var didRequest: Bool? = false
+    var didConnect: Bool? = false
+    var didApply: Bool? = false
 }
 
 enum NotificationType: Int, Decodable {

@@ -22,7 +22,7 @@ struct UserListView: View {
             LazyVGrid(columns: layout, content : {
                 ForEach(users) { user in
                     NavigationLink(destination: ProfileView(user: user)) {
-                        NetworkCell(user: user)
+                        NetworkCell(user: user, viewModel: ProfileViewModel(user: user))
                     }
                 }
             })

@@ -13,6 +13,8 @@ struct JobView: View {
     var body: some View {
         ScrollView {
             AddJobButtonView(viewModel: viewModel)
+                .padding(.top, 10)
+
             LazyVStack(alignment: .leading) {
                 ForEach(viewModel.jobs) { job in
                     JobCellView(viewModel: JobCellViewModel(job: job))

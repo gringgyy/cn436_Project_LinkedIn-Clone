@@ -11,9 +11,11 @@ import Kingfisher
 struct HomeCell: View {
     //var postImage: String
     @ObservedObject var viewModel: HomeCellViewModel
+    
     var didLike: Bool {
         viewModel.post.didLike ?? false
     }
+    
     var body: some View {
         VStack (alignment: .leading){
             if let user = viewModel.post.user {
@@ -34,23 +36,23 @@ struct HomeCell: View {
                                 .clipped()
                                 .clipShape(Circle())
                         }
-                            VStack (alignment: .leading){
-                                Text(viewModel.post.ownerFullname)
-                                    .font(.system(size: 14, weight: .semibold))
-                                    .foregroundColor(.black)
-                                Text("Status")
-                                    .font(.system(size: 12, weight: .medium))
-                                    .foregroundColor(.gray)
-                                Text("2H")
-                                    .font(.system(size: 12, weight: .medium))
-                                    .foregroundColor(.gray)
-                            }
+                        VStack (alignment: .leading){
+                            Text(viewModel.post.ownerFullname)
+                                .font(.system(size: 14, weight: .semibold))
+                                .foregroundColor(.black)
+                            Text("Status")
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(.gray)
+                            Text(viewModel.timestamp)
+                                .font(.system(size: 12, weight: .medium))
+                                .foregroundColor(.gray)
+                        }
                     }
                     .padding(.leading, 20)
                 }
             }
             
-            Text(" \(viewModel.post.caption)")
+            Text(viewModel.post.caption)
                 .font(.system(size: 14, weight: .medium))
                 .padding(.leading, 20)
                 .padding(.bottom, 0.5)
@@ -68,6 +70,7 @@ struct HomeCell: View {
                     .frame(width: 15, height: 15)
                 Text(viewModel.likeText)
                     .font(.system(size: 12, weight: .light))
+                
             }
             .padding([.leading, .top, .bottom], 8)
             
@@ -82,24 +85,28 @@ struct HomeCell: View {
                             .resizable()
                             .scaledToFill()
                             .frame(width: 15, height: 15)
+                            .foregroundColor(.black)
                         Text("Like")
                             .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(.black)
                     }
                 }
                 .padding(.trailing, 30)
                 .padding(.leading, 35)
                 
-                NavigationLink(destination: CommentsView(post: viewModel.post)) {
+                
                     VStack {
                         Image(systemName: "text.bubble")
                             .resizable()
                             .scaledToFill()
                             .frame(width: 15, height: 15)
+                            .foregroundColor(.black)
                         Text("Comment")
                             .font(.system(size: 12, weight: .medium))
+                            .foregroundColor(.black)
                     }
                     .padding([.leading, .trailing], 30)
-                }
+                
                 
                 VStack {
                     Image(systemName: "arrow.turn.up.right")

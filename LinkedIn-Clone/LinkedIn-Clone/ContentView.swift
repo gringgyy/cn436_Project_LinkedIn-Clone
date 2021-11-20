@@ -18,12 +18,14 @@ struct ContentView: View {
     }
     
     var body: some View {
-        if viewModel.userSession == nil {
-            SignInView()
-        } else {
-            if let user = viewModel.currentUser {
-                //MainView(selectedIndex: $selectedIndex)
-                MainView(user: user, selectedIndex: $selectedIndex)
+        Group {
+            if viewModel.userSession == nil {
+                SignInView()
+            } else {
+                if let user = viewModel.currentUser {
+                    //MainView(selectedIndex: $selectedIndex)
+                    MainView(user: user, selectedIndex: $selectedIndex)
+                }
             }
         }
     }

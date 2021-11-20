@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct JobDetailView: View {
+    @ObservedObject var viewModel: JobCellViewModel
+    
+    var didApply: Bool {
+        viewModel.job.didApply ?? false
+    }
+    
     var body: some View {
         ScrollView {
             LazyVStack(alignment: .leading) {
@@ -18,42 +25,39 @@ struct JobDetailView: View {
                     .background(.white)
                     .overlay(
                         VStack(alignment: .leading) {
-                            Text("Job name")
+                            Text(viewModel.job.jobTitle)
                                 .font(.system(size: 25, weight: .bold))
                                 .padding(.top, 20)
                             HStack(alignment: .top) {
-                                Image("Anchilee")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .frame(width: 50, height: 50)
-                                    .clipped()
-                                    .clipShape(Circle())
-                                    .padding(.top, 5)
+                                if let imageURL = viewModel.job.ownerImageURL {
+                                    KFImage(URL(string:  imageURL))
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 50, height: 50)
+                                        .clipped()
+                                        .clipShape(Circle())
+                                        .padding(.top, 5)
+                                } else {
+                                Image(systemName: "person.crop.circle.fill")
+                                        .resizable()
+                                        .scaledToFill()
+                                        .frame(width: 50, height: 50)
+                                        .clipped()
+                                        .clipShape(Circle())
+                                        .padding(.top, 5)
+                                }
+                                
                                 VStack(alignment: .leading) {
-                                    Text("Job Poster")
+                                    Text(viewModel.job.ownerFullname)
                                         .font(.system(size: 15, weight: .light))
                                     
-                                    Text("Location")
+                                    Text(viewModel.job.jobLocation)
                                         .font(.system(size: 15, weight: .light))
                                         .padding(.top, -3)
                                 }
                                 .padding(.top, 5)
                             }
                             //Spacer()
-                            Button {
-                                //didFollow ? viewModel.unfollow() : viewModel.follow()
-                            } label: {
-                                Text("Apply")
-                                    .font(.system(size: 16, weight: .semibold))
-                                    .frame(width: 110, height: 30)
-                                    .foregroundColor(Color.blue)
-                                    .background(.white)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 30)
-                                            .stroke(Color.blue, lineWidth: 2)
-                                    )
-                            }
-                            .padding(.top, 10)
                         }
                             .padding(.leading, -190)
                             .padding(.top, -30)
@@ -68,22 +72,7 @@ struct JobDetailView: View {
                         VStack(alignment: .leading) {
                             Text("Job Description")
                                 .font(.system(size: 25, weight: .bold))
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
-                                .font(.system(size: 16, weight: .light))
-                        }
-                            .padding()
-                    )
-                
-                RoundedRectangle(cornerRadius: 0)
-                    .stroke(.tertiary, lineWidth: 1)
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 4)
-                    .scaledToFill()
-                    .background(.white)
-                    .overlay(
-                        VStack(alignment: .leading) {
-                            Text("About The Job Poster")
-                                .font(.system(size: 25, weight: .bold))
-                            Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+                            Text(viewModel.job.jobDescription)
                                 .font(.system(size: 16, weight: .light))
                         }
                             .padding()
@@ -94,10 +83,4 @@ struct JobDetailView: View {
         }
         
         
-}
-
-struct JobDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        JobDetailView()
-    }
 }

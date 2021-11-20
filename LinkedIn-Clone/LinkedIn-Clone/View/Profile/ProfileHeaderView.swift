@@ -14,11 +14,9 @@ struct ProfileHeaderView: View {
     @State var imagePickerPresented = false
     
     var body: some View {
-        RoundedRectangle(cornerRadius: 0)
-            .stroke(.tertiary, lineWidth: 1)
-            .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height / 4)
+        Image("Header")
+            .frame(width: UIScreen.main.bounds.width)
             .scaledToFill()
-            .background(.tertiary)
                     
         LazyVStack(alignment: .leading) {
             ZStack {

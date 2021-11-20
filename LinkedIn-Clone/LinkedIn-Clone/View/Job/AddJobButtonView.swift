@@ -30,9 +30,3 @@ struct AddJobButtonView: View {
         }
     }
 }
-
-struct AddJobButtonView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddJobButtonView(viewModel: JobViewModel())
-    }
-}

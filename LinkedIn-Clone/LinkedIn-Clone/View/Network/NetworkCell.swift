@@ -10,9 +10,18 @@ import Kingfisher
 
 struct NetworkCell: View {
     let user: User
+    @ObservedObject var viewModel: ProfileViewModel
+    
+    var didRequest: Bool {
+        viewModel.user.didRequest ?? false
+    }
+    var didConnect: Bool {
+        viewModel.user.didConnect ?? false
+    }
+    
     var body: some View {
         RoundedRectangle(cornerRadius: 8)
-            .stroke(.tertiary, lineWidth: 1)
+            .stroke(.quaternary, lineWidth: 2)
             .frame(width:(UIScreen.main.bounds.width / 2)-20, height: (UIScreen.main.bounds.width / 2)+40)
             .scaledToFill()
             .background(.white)
@@ -45,21 +54,24 @@ struct NetworkCell: View {
                             .foregroundColor(.gray)
                     }
                     Spacer()
-                    Button {
-                        //didFollow ? viewModel.unfollow() : viewModel.follow()
-                    } label: {
-                        Text("Connect")
-                            .font(.system(size: 16, weight: .semibold))
-                            .frame(width: 172, height: 35)
-                            .foregroundColor(Color.blue)
-                            .background(.white)
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 30)
-                                    .stroke(Color.blue, lineWidth: 2)
-                            )
+                    if !viewModel.user.isCurrentUser {
+                        Button {
+                            didRequest ? viewModel.cancelRequest() : viewModel.request()
+                            viewModel.connection()
+                        } label: {
+                            Text(didRequest ? (didConnect ? "Connected" : "Requested") : "Connect")
+                                .font(.system(size: 16, weight: .semibold))
+                                .frame(width: 172, height: 35)
+                                .foregroundColor(didRequest ? Color.gray : Color.blue)
+                                .background(.white)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 30)
+                                        .stroke((didRequest ? Color.gray : Color.blue), lineWidth: 2)
+                                )
+                        }
+                        .cornerRadius(30)
+                        .padding(.bottom, 20)
                     }
-                    .cornerRadius(30)
-                    .padding(.bottom, 20)
                 }
             )
     }

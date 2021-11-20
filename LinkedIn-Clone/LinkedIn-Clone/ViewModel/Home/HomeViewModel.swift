@@ -26,6 +26,7 @@ class HomeViewModel: ObservableObject {
             guard let documents = snap?.documents else { return }
             
             self.posts = documents.compactMap { try? $0.data(as: Post.self) }
+            
         }
     }
 }

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AddJobView: View {
+    @ObservedObject var viewModel = addJobViewModel()
+     
     @Environment(\.dismiss) var dismiss
     @State var jobTitle = ""
     @State var jobLocation = ""
@@ -43,7 +45,7 @@ struct AddJobView: View {
             .padding(.bottom, 30)
         
         Button {
-            //didFollow ? viewModel.unfollow() : viewModel.follow()
+            viewModel.addJob(jobTitle: jobTitle, jobLocation: jobLocation, jobDescription: description)
             dismiss()
         } label: {
             RoundedRectangle(cornerRadius: 30)
@@ -55,11 +57,5 @@ struct AddJobView: View {
                         .foregroundColor(.white)
                 )
         }
-    }
-}
-
-struct AddJobView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddJobView()
     }
 }
